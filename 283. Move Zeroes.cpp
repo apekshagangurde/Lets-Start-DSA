@@ -20,3 +20,24 @@ public:
         }
     }
 };
+
+
+
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int j = 0; // Pointer for the position of the next non-zero element
+        int i = 0; // Pointer to traverse the array
+
+        while (i < nums.size()) {
+            if (nums[i] == 0) {
+                i++;
+            }else{
+                swap(nums[i], nums[j]);
+                j++;
+                i++;
+            }
+            
+        }
+    }
+};
