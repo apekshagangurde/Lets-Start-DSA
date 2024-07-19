@@ -1,0 +1,30 @@
+//https://leetcode.com/problems/max-number-of-k-sum-pairs/
+//https://www.youtube.com/watch?v=HK73YqrLEn0&list=PL-Jc9J83PIiEA7f_cI_v6oqh_EYWboj6S&index=12
+class Solution {
+public:
+    int maxOperations(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end()); // Sort the array
+        
+        int li = 0; // Left pointer
+        int ri = nums.size() - 1; // Right pointer
+        int ans = 0; // To count the number of valid pairs
+        
+        // Use two-pointer technique to find pairs
+        while (li < ri) {
+            int sum = nums[li] + nums[ri];
+            
+            if (sum < k) {
+                li++; // Move left pointer to the right
+            } else if (sum > k) {
+                ri--; // Move right pointer to the left
+            } else {
+                // Found a valid pair
+                ans++;
+                li++; // Move left pointer to the right
+                ri--; // Move right pointer to the left
+            }
+        }
+        
+        return ans;
+    }
+};
