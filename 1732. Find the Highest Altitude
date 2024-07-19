@@ -1,0 +1,17 @@
+//https://leetcode.com/problems/find-the-highest-altitude/
+//https://www.youtube.com/watch?v=EbkC_1_M338&list=PL-Jc9J83PIiEA7f_cI_v6oqh_EYWboj6S&index=17
+class Solution {
+public:
+    int largestAltitude(vector<int>& gain) {
+        int alt = 0; // Initialize the starting altitude to 0
+        int maxAlt = 0; // Initialize the maximum altitude to 0
+
+        // Iterate over each value in the gain array
+        for (int val : gain) {
+            alt += val; // Update the current altitude by adding the gain
+            maxAlt = max(maxAlt, alt); // Update the maximum altitude if the current altitude is higher
+        }
+
+        return maxAlt; // Return the maximum altitude reached
+    }
+};
