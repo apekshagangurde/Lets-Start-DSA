@@ -1,0 +1,21 @@
+//https://leetcode.com/problems/is-subsequence/
+//https://www.youtube.com/watch?v=pchdbuAbkBU&list=PL-Jc9J83PIiEA7f_cI_v6oqh_EYWboj6S&index=10
+
+class Solution {
+public:
+    bool isSubsequence(string s, string t) {
+        int i = 0; // Pointer for s
+        int j = 0; // Pointer for t
+        
+        // Traverse t and check for subsequence
+        while (j < t.size()) {
+            if (i < s.size() && s[i] == t[j]) {
+                i++; // Move pointer for s
+            }
+            j++; // Move pointer for t
+        }
+        
+        // Check if we have matched all characters of s
+        return i == s.size();
+    }
+};
