@@ -28,3 +28,28 @@ public:
 return false;
 } 
 };
+
+
+
+
+class Solution {
+public:
+    bool detectCapitalUse(string word) {
+        int countCapitals = 0;
+
+        // Count the number of capital letters in the word
+        for (char &ch : word) {
+            if (isupper(ch))
+                countCapitals++;
+        }
+
+        // Check the conditions for correct capital use
+        if (countCapitals == 0 || 
+            countCapitals == word.length() || 
+            (countCapitals == 1 && isupper(word[0]))) {
+            return true;
+        }
+        
+        return false;
+    }
+};
