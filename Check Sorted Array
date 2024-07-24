@@ -1,0 +1,14 @@
+//que:https://www.naukri.com/code360/problems/ninja-and-the-sorted-check_6581957?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_Arrayproblems&leftPanelTabValue=SUBMISSION
+//https://www.youtube.com/watch?v=37E9ckMDdTk&t=1685s
+
+int isSorted(int n, vector<int> a) {
+    // Write your code here.
+    for(int i=1;i<n;i++){
+    if(a[i]>=a[i-1]){
+
+    } else {
+      return false;
+    }
+}
+    return true;
+}
