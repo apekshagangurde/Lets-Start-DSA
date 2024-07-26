@@ -1,0 +1,19 @@
+//que:https://www.geeksforgeeks.org/problems/rotate-array-by-n-elements-1587115621/1
+//logic:https://www.youtube.com/watch?v=gJJ05Jc0gUk&list=PLuAADu3OvBt50CW-c5xHGcqRlR-5L_Dnd&index=7
+
+void rotateArr(int arr[], int d, int n){
+        // code here
+          vector<int> ans;
+        d=d%n;
+        for(int i=d; i<n; i++){
+            ans.push_back(arr[i]);
+         }
+        
+        for(int i=0; i<d; i++){
+            ans.push_back(arr[i]);
+        }
+        
+         for(int i=0; i<ans.size(); i++){
+            arr[i] = ans[i];
+         }
+    }
