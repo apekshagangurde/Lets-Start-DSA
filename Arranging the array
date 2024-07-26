@@ -1,0 +1,22 @@
+//que:https://www.geeksforgeeks.org/problems/arranging-the-array1131/1
+//logic:https://www.youtube.com/watch?v=BvRQmbDCM9M&list=PLuAADu3OvBt50CW-c5xHGcqRlR-5L_Dnd&index=5
+
+public:
+        void Rearrange(int arr[], int n)
+        {
+            // Your code goes here
+            vector<int> NonNeg;
+            int cnt=0;
+            
+            for(int i=0;i<n;i++)
+            {
+                if(arr[i]<0)
+                 arr[cnt++]=arr[i];
+                else
+                NonNeg.push_back(arr[i]);
+            }
+            
+            for(int i=0;i<NonNeg.size();i++)
+                arr[cnt++]=NonNeg[i];
+    }
+        
