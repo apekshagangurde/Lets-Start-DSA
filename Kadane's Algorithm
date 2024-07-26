@@ -1,0 +1,18 @@
+//que:https://www.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1?page=1&sortBy=submissions
+//logic:https://www.youtube.com/watch?v=VHAvCMgjAAs&list=PLuAADu3OvBt50CW-c5xHGcqRlR-5L_Dnd&index=8
+
+public:
+    // Function to find the sum of contiguous subarray with maximum sum.
+    long long maxSubarraySum(vector<int> &arr) {
+        // code here...
+        int sum=0;
+        int maxi=arr[0];
+        for(int i=0;i<arr.size();i++)
+        {
+            sum=sum+arr[i];
+            maxi=max(maxi,sum);
+            if(sum<0)
+            sum=0;
+        }
+       return maxi;
+    }
