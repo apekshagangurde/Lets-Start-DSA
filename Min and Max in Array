@@ -1,0 +1,22 @@
+//que:https://www.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1?page=4&sortBy=submissions
+
+class Solution {
+  public:
+    pair<long long, long long> getMinMax(vector<long long int> arr) {
+        // code hereint max = arr[0];
+        int max=arr[0];
+        int min=arr[0];
+        for(int i=0;i<arr.size();i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+            if(arr[i]<min){
+                min=arr[i];
+            }
+        }
+       pair<long long,long long> ans;
+        ans.first = min;
+        ans.second = max;
+        return ans;
+    }
+};
