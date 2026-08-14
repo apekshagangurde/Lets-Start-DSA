@@ -3,9 +3,9 @@
 class Solution {
   public:
     pair<long long, long long> getMinMax(vector<long long int> arr) {
-        // code hereint max = arr[0];
-        int max=arr[0];
-        int min=arr[0];
+        // code here
+        long long max=arr[0];
+        long long min=arr[0];
         for(int i=0;i<arr.size();i++){
             if(arr[i]>max){
                 max=arr[i];
