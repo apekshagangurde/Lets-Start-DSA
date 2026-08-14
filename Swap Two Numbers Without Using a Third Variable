@@ -5,7 +5,7 @@ class Solution {
 public:
     void swapNumbers(int &a, int &b) {
 
-        // Wrong approach
+     
         a = a + b;
         b = a - b;
         b = a - b;
